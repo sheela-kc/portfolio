@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Project1Airline</title>
+    <title>Edit This</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -17,12 +17,23 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             background: #f9f9f9;
-            font-size: 14px;
+            font-size: 12px;
         }
         .test-title {
             font-weight: bold;
             margin-bottom: 5px;
-            font-size: 14px;
+            font-size: 12px;
+        }
+        details {
+            margin-bottom: 10px;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            padding: 5px;
+            background: #eee;
+            border-radius: 5px;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -58,32 +69,68 @@
             <div class="inner">
                 <img src="images/sw.png" width="170" height="50" alt="Southwest Airlines">
                 <p><a href="https://www.southwest.com/">Southwest Airlines Website</a></p>
-                
-                <h1>Testing Southwest Airlines</h1>
+
                 
                 <h2>Test Cases</h2>
                 
-                <div class="test-case">
-                    <div class="test-title">Test Case 1: Login Functionality</div>
-                    <ol>
-                        <li>Open the login page.</li>
-                        <li>Enter a valid username.</li>
-                        <li>Enter a valid password.</li>
-                        <li>Click the "Login" button.</li>
-                        <li>Verify that the user is redirected to the dashboard.</li>
-                    </ol>
-                </div>
+                <details>
+                    <summary>TC01: Login Functionality</summary>
+                    <div class="test-case">
+                        <p><strong>Description:</strong> Verify that users can log in with valid credentials</p>
+                        <p><strong>Preconditions:</strong> User has created a registered account</p>
+                        <p><strong>Test Steps:</strong></p>
+                        <ol>
+                            <li>Navigate to the Southwest Airlines login page</li>
+                            <li>Enter a valid username</li>
+                            <li>Enter a valid password</li>
+                            <li>Click the "Login" button</li>
+                            <li>Verify that the user is redirected to the dashboard</li>
+                        </ol>
+                        <p><strong>Expected Result:</strong> User successfully logs in and sees the dashboard</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>TC02: Invalid Login Attempt</summary>
+                    <div class="test-case">
+                        <p><strong>Description:</strong> Verify that an error message appears for invalid login attempts.</p>
+                        <p><strong>Preconditions:</strong> User account must exist</p>
+                        <p><strong>Test Steps:</strong></p>
+                        <ol>
+                            <li>Navigate to the Southwest Airlines login page</li>
+                            <li>Enter an invalid username or incorrect password</li>
+                            <li>Click the "Login" button</li>
+                            <li>Verify that an appropriate error message is displayed</li>
+                        </ol>
+                        <p><strong>Expected Result:</strong> Error message appears, and login is denied</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>TC03: Flight Search Functionality</summary>
+                    <div class="test-case">
+                        <p><strong>Description:</strong> Verify that users can search for flights based on different criteria.</p>
+                        <p><strong>Preconditions:</strong> Website is accessible</p>
+                        <p><strong>Test Steps:</strong></p>
+                        <ol>
+                            <li>Navigate to the Southwest Airlines homepage</li>
+                            <li>Enter departure and arrival cities</li>
+                            <li>Select travel dates</li>
+                            <li>Choose the number of passengers</li>
+                            <li>Click 'Search' button</li>
+                            <li>Verify that search results display available flights</li>
+                        </ol>
+                        <p><strong>Expected Result:</strong> Relevant flight options appear with correct pricing.</p>
+                    </div>
+                </details>
+
+                <br>
+                <h2>Automated Scripts</h2>
+                <br>
                 
-                <div class="test-case">
-                    <div class="test-title">Test Case 2: Invalid Login Attempt</div>
-                    <ol>
-                        <li>Open the login page.</li>
-                        <li>Enter an invalid username.</li>
-                        <li>Enter an incorrect password.</li>
-                        <li>Click the "Login" button.</li>
-                        <li>Verify that an error message is displayed.</li>
-                    </ol>
-                </div>
+
+
+                
             </div>
         </div>
         
